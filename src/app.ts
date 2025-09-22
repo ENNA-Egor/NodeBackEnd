@@ -2,6 +2,11 @@ import  express  from 'express';
 
 const app = express();
 
+app.use((req, res, next) => {
+  console.log ('First commit');
+  next();
+})
+
 app.get('/', (req, res) => {
   res.send('<h1>Hello from Home page. Page number one  <h2> One  <button type="button">Open page About</button>');
 })
