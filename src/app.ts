@@ -10,6 +10,10 @@ app.get('/about', (req, res) => {
     res.send('<h1>Hello from About page. Page number two <h2> Two <button type="button">Open page Home</button>');
 })
 
+app.all('*path', (req, res) => {
+  res.status(404).send('<h1>Nothing found.');
+})
+
 app.listen(3000, () => {
     console.log ('Start one project. Hello');
 })
