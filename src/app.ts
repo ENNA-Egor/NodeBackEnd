@@ -4,10 +4,13 @@ import {getHomePage, postHomePage, getAboutPage, getAllPage} from './controllers
 
 const app = express();
 
-app.use((req, res, next) => {
-  console.log ('First commit');
-  next();
-})
+// app.use((req, res, next) => {
+//   console.log ('First commit');
+//   next();
+// })
+app.use(express.json());
+
+app.use(express.urlencoded({extended:false}));
 
 app.get('/', getHomePage)
 
