@@ -1,5 +1,7 @@
 import  express  from 'express';
 
+import {getHomePage, postHomePage, getAboutPage, getAllPage} from './controllers/pages'
+
 const app = express();
 
 app.use((req, res, next) => {
@@ -7,17 +9,13 @@ app.use((req, res, next) => {
   next();
 })
 
-app.get('/', (req, res) => {
-  res.send('<h1>Hello from Home page. Page number one  <h2> One  <button type="button">Open page About</button>');
-})
+app.get('/', getHomePage)
 
-app.get('/about', (req, res) => {
-    res.send('<h1>Hello from About page. Page number two <h2> Two <button type="button">Open page Home</button>');
-})
+app.post('/',postHomePage)
 
-app.all('*path', (req, res) => {
-  res.status(404).send('<h1>Nothing found.');
-})
+app.get('/about', getAboutPage)
+
+app.all('*path', getAllPage)
 
 app.listen(3000, () => {
     console.log ('Start one project. Hello');
