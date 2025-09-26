@@ -2,7 +2,8 @@ import  express  from 'express';
 
 import {getHomePage, postHomePage, getAboutPage, getAllPage} from './controllers/home'
 
-import todosRouter from './routes/todos';
+// import todosRouter from './routes/todos';
+import appRouner from './routes'
 
 const app = express();
 
@@ -14,7 +15,9 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended:false}));
 
-app.use('/todos',todosRouter);
+app.use(appRouner);
+
+// app.use('/todos',todosRouter);
 
 // app.get('/', getHomePage)
 
