@@ -25,7 +25,7 @@ app.use(appRouner);
 
 // app.get('/about', getAboutPage)
 
-app.all('*path', getAllPage)
+// app.all('*path', getAllPage)
 
 app.listen(3000, () => {
     console.log ('Start one project. Hello');
