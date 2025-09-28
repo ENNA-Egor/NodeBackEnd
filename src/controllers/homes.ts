@@ -1,9 +1,9 @@
 import {Request, Response} from 'express';
 
-export const getHomePage = (req:Request, res:Response) => {
-  console.log (req.query);
-  res.send('<h1>Hello from Home page. Page number one  <h2> One  <button type="button">Open page About</button>');
-}
+// export const getHomePage = (req:Request, res:Response) => {
+//   console.log (req.query);
+//   res.send('<h1>Hello from Home page. Page number one  <h2> One  <button type="button">Open page About</button>');
+// }
 
 export const postHomePage = (req:Request, res:Response) => {
   console.log(req.body);

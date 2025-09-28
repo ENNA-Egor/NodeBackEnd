@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0 2rem;
+  color: rgb(10, 56, 116);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem;
+  color: rgb(85, 48, 217);
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+button {
+  color: #2541c9;
+  background-color: rgb(153, 209, 209);
+  border-radius: 0.3rem;
+  margin: 1rem;
+}

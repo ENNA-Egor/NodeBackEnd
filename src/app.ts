@@ -1,18 +1,20 @@
 import  express  from 'express';
+import path from 'path';
 
-import {getHomePage, postHomePage, getAboutPage, getAllPage} from './controllers/homes'
+import {/*getHomePage,*/ postHomePage, getAboutPage, getAllPage} from './controllers/homes'
 
 // import todosRouter from './routes/todos';
-import appRouner from './routes'
+import appRouter from './routes'
 
 const app = express();
 
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../', 'public')));
 
 app.use(express.urlencoded({extended:false}));
 
-app.use(appRouner);
+app.use(appRouter);
 
 
 

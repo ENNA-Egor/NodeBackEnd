@@ -1,11 +1,11 @@
 import {Router} from 'express'
-import {getHomePage, postHomePage, getAboutPage, getAllPage} from '../controllers/homes';
+import {/*getHomePage,*/ postHomePage, getAboutPage, getAllPage} from '../controllers/homes';
 
 
 
 const router = Router();
 
-router.get ('/', getHomePage);
+// router.get ('/', getHomePage);
 
 router.post ('/', postHomePage);
 
