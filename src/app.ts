@@ -1,4 +1,5 @@
 import  express  from 'express';
+import {errors} from 'celebrate'
 import path from 'path';
 
 import {/*getHomePage,*/ postHomePage, getAboutPage, getAllPage} from './controllers/homes'
@@ -16,7 +17,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(appRouter);
 
-
+app.use (errors());
 
 app.listen(3000, () => {
     console.log ('Start one project. Hello');
